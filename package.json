@@ -1,0 +1,19 @@
+{
+  "name": "cypres-learn",
+  "version": "1.0.0",
+  "description": "Cypress-Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "Cypress-test",
+    "e2e:chrome": "cypress run --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Muguntha96"
+  },
+  "author": "Muguntha",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.8.1"
+  }
+}
