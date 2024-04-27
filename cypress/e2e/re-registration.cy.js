@@ -1,5 +1,5 @@
-describe("Bank Registration", function () {
-  it("Regidter the Account", function () {
+describe("existing user tries re-Registration", function () {
+  it("existing User tries to re-register", function () {
     cy.visit("https://parabank.parasoft.com/parabank/index.htm");
     cy.get("#loginPanel > p:nth-child(3) > a").click();
     cy.get("input[id='customer.firstName']").type("Mugntha");
@@ -13,5 +13,7 @@ describe("Bank Registration", function () {
     cy.get("#customer\\.password").type("Muguntha");
     cy.get("#repeatedPassword").type("Muguntha");
     cy.get('[colspan="2"] > .button').click();
+    cy.get("span[id='customer.username.errors']").should('have.text',"This username already exists.")
+    
   });
 });
